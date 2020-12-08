@@ -1,19 +1,17 @@
-function GetURLParameter(sParam)
-{
-    var sPageURL = window.location.search.substring(1);
-    var sURLVariables = sPageURL.split('&');
-    for (var i = 0; i < sURLVariables.length; i++) 
-    {
-        var sParameterName = sURLVariables[i].split('=');
-        if (sParameterName[0] == sParam) 
-        {
-            return sParameterName[1];
-        }
-    }
-}​
-var id = GetURLParameter('id')
-var url = 'https://yogeshwaran01.herokuapp.com/post/id?=' + id
-var content = "0; URL=" + url
+const params = new URLSearchParams(document.location.search);
 
-document.getElementById('redirect').setAttribute('content', content)
-document.getElementById('link').setAttribute('href', url)
+var _id = params.get("id");
+var url = "https://yogeshwaran01.herokuapp.com/post?id=" + _id;
+var content = "0; URL=" + url;
+
+var meta = document.createElement("meta");
+meta.setAttribute("http-equiv", "refresh");
+meta.setAttribute("content", content);
+
+document.getElementsByTagName("head")[0].appendChild(meta);
+
+var link = document.createElement("link");
+link.setAttribute("rel", "cononical");
+link.setAttribute("href", url);
+
+document.getElementsByTagName("head")[0].appendChild(link);
