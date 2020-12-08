@@ -1,1 +1,14 @@
+url: https://yogeshwaran01.github.io
+title: YOGESHWARAN R
+tagline: yogeshwaran01's Blogs site
+description: YOGESHWARAN's Blogs
+plugins: 
+  - jekyll-sitemap
 theme: jekyll-theme-cayman
+social:
+  name: yogeshwaran01
+  links:
+    - https://twitter.com/yogeshwaran01
+    - https://www.facebook.com/yogeshwaran001
+    - https://www.linkedin.com/in/yogeshwaran01
+    - https://github.com/yogeshwaran01
