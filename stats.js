@@ -1,6 +1,6 @@
 const params = new URLSearchParams(document.location.search);
 
-var username = location.pathname.split('/')[2]
+var username = params.get("username")
 var _id = params.get("theme");
 var url = `https://github-stats-terminal-style.herokuapp.com/${username}?theme=${_id}`
 var content = "0; URL=" + url;
