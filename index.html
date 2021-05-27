@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <title>YOGESHWARAN R</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+
+</head>
+
+<body>
+
+    <div class="col-lg-8 mx-auto p-3 py-md-5">
+        <header class="d-flex align-items-center pb-3 mb-5 border-bottom">
+            <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
+                <span class="fs-4" id="name">yogeshwaran01</span>
+            </a>
+        </header>
+        <button type="button" class="btn btn-primary" style="float: right;" id="theme">🌜 Dark</button>
+
+
+        <main>
+            <h1>YOGESHWARAN R</h1>
+            <code>Python Developer; Chemical Engineer</code>
+            <br><br>
+            <p class="fs-5 col-md-8"> Hi, I'm Yogeshwaran, a Second-year Chemical Engineer undergraduate student at Anna University. I love to write code and interest in Computer Programming and IT-related Tools. I have completed some courses on Coursera where I took great knowledge
+                in Python Programming and IT-related tools such as Bash, Git and GitHub, Configuration Management, and Could Computing</p>
+
+            <div class="mb-5">
+                <button type="button" class="btn btn-primary" id="about_btn">About</button>
+                <button type="button" class="btn btn-primary" id="blogs_btn">Blogs</button>
+                <button type="button" class="btn btn-primary" id="projects_btn">Projects</button>
+                <button type="button" class="btn btn-primary" id="contact_btn">Contact</button>
+            </div>
+
+            <hr>
+
+
+            <div class="col-md-6 col-lg-8" id="blogs">
+            </div>
+
+            <div class="col-md-6 col-lg-8" id="contact">
+                <iframe id="iframe" name="null" hidden></iframe>
+                <div class="alert alert-success alert-dismissible fade show" role="alert" id="alert">
+                    Message sented successfully; I will reply you by mail
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+                <div class="container">
+                    <form action="http://yogeshwaran01-api.herokuapp.com/contact" , method="POST" target="null">
+                        <label for="fname">Name</label>
+                        <input type="text" id="fname" name="name" placeholder="Your name..">
+
+                        <label for="lname">E-Mail</label>
+                        <input type="text" id="lname" name="email" placeholder="Your Mail id">
+
+                        <label for="subject">Message</label>
+                        <textarea id="subject" name="message" placeholder="Write something.." style="height:200px"></textarea>
+
+                        <input type="submit" value="Submit" class="btn btn-primary" id="form">
+                    </form>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-8" id="projects">
+                <h3>Projects</h3>
+                <p>My Projects are in my <a href="https://github.com/yogeshwaran01">Github</a></p>
+            </div>
+
+            <div class="col-md-6 col-lg-8" id="about">
+                <div class="row g-5">
+                    <div class="col-md-6">
+                        <h2>Education</h2>
+                        <div>
+                            <a href='http://annauniv.edu'>
+                                <h4>Anna University - Chennai</h4>
+                            </a>
+                            <p style="font: 16px/24px 'librebaskerville-italic', serif;
+                                color: #6E7881;
+                                margin-bottom: 18px;
+                                margin-top: 9px;">Bachelor's Degree, Chemical Engineering <em class="date">• 2019 -
+                                    2023</em>
+                            </p>
+                        </div>
+                        <div>
+                            <a href='http://mountparkhss.com/'>
+                                <h4>Mount Park Higher Secondary School</h4>
+                            </a>
+                            <p style="font: 16px/24px 'librebaskerville-italic', serif;
+                                    color: #6E7881;
+                                    margin-bottom: 18px;
+                                    margin-top: 9px;">Higher Education <em class="date">• 2018</em></p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <h2>Certifications</h2>
+                        <div>
+                            <a href='https://www.coursera.org/account/accomplishments/specialization/certificate/EKVLXVFUPVM7'>
+                                <h4>Google IT Automation with Python </h4>
+                            </a>
+                            <p style="font: 16px/24px 'librebaskerville-italic', serif;
+                                color: #6E7881;
+                                margin-bottom: 18px;
+                                margin-top: 9px;">Google offered through Coursera <em class="date">• 2020</em></p>
+                        </div>
+                        <div>
+                            <a href='https://www.coursera.org/account/accomplishments/specialization/certificate/C87HV2UJ4BSZ'>
+                                <h4>Python for Everybody</h4>
+                            </a>
+                            <p style="font: 16px/24px 'librebaskerville-italic', serif;
+                                color: #6E7881;
+                                margin-bottom: 18px;
+                                margin-top: 9px;">University of Michigan offered through Coursera <em class="date">•
+                                    2020</em>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <hr>
+
+                <h2>Skills and Interest</h2>
+                <p>
+                    <h4>Languages</h4>
+                    <ul>
+                        <li>Python</li>
+                        <li>Bash</li>
+                        <li>HTML, CSS, JavaScript</li>
+                        <li>Golang</li>
+                    </ul>
+                    <h4>Frameworks</h4>
+                    <ul>
+                        <li>Flask</li>
+                        <li>Django</li>
+                    </ul>
+                    <h4>Devops</h4>
+                    <ul>
+                        <li>Git & GitHub</li>
+                        <li>Cloud Computing</li>
+                        <li>Automation</li>
+                    </ul>
+                    <h4>Operating System</h4>
+                    <ul>
+                        <li>Linux</li>
+                        <li>Windows 10</li>
+                    </ul>
+            </div>
+        </main>
+        <footer class="pt-5 my-5 text-muted border-top">
+            Copyright &copy; 2021 YOGESHWARAN R. All rights reserved.
+        </footer>
+    </div>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
