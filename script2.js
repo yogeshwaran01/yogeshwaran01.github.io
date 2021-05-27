@@ -1,5 +1,5 @@
-var query = window.location.href.split("/")[4];
-console.log(query)
+var query = new URLSearchParams(document.location.search).get('post')
+
 const Http = new XMLHttpRequest();
 
 const url = "https://yogeshwaran01-api.herokuapp.com/api/get";

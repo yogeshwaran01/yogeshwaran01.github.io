@@ -24,7 +24,7 @@ Http.onloadend = (e) => {
 
     for (let index = 0; index < data.length; index++) {
         var element = data[index];
-        var url_ = "/post/" + element.url
+        var url_ = "/post?post=" + element.url
         var title_ = element.title
         var date_ = element.timestamp
         var ele_template = `<div class="card-body">
