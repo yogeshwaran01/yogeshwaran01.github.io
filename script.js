@@ -99,12 +99,12 @@ theme_btn.onclick = function() {
         element.classList.toggle("dark-mode")
 
     }
-    // eles = document.getElementsByClassName('card-footer')
-    // for (let index = 0; index < eles.length; index++) {
-    //     var element = eles[index];
-    //     element.classList.toggle("dark-mode")
+    eles = document.getElementsByClassName('card-footer')
+    for (let index = 0; index < eles.length; index++) {
+        var element = eles[index];
+        element.classList.toggle("dark-mode")
 
-    // }
+    }
     var txt = "🌜 Dark"
     if (!!this.dataset.clicked) {
         this.dataset.clicked = ""
