@@ -51,7 +51,7 @@ contact_elements.style.display = "none"
 projects_elements.style.display = "none"
 about_elements.style.display = "block"
 
-// Button Click enent Manager
+// Button Click event Manager
 
 blogs_btn.onclick = function() {
     blogs_elements.style.display = "block"
@@ -82,9 +82,6 @@ contact_btn.onclick = function() {
     about_elements.style.display = "none"
 }
 
-form_btn.onclick = function() {
-    document.getElementById('alert').style.display = "block"
-}
 
 // Dark Mode
 
@@ -113,4 +110,30 @@ theme_btn.onclick = function() {
         txt = "🌞 Light";
     }
     this.innerHTML = txt;
+}
+
+
+// Submit Contact form
+
+
+var form_sub = document.getElementById('form')
+
+form_sub.onclick = function() {
+    var name_ = document.getElementById('fname').value;
+    var email_ = document.getElementById('lname').value;
+    var message_ = document.getElementById('subject').value;
+
+    var post_data = {
+        "name": name_,
+        "email": email_,
+        "message": message_
+    }
+
+    var requests = new XMLHttpRequest()
+    requests.open("POST", "https://yogeshwaran01-api.herokuapp.com/api/contact")
+
+    requests.setRequestHeader("Content-Type", "application/json")
+
+    requests.send(JSON.stringify(post_data))
+    document.getElementById('alert').style.display = "block"
 }

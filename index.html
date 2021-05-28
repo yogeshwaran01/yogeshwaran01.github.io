@@ -171,17 +171,16 @@
                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                 </div>
                 <div class="container">
-                    <form action="http://yogeshwaran01-api.herokuapp.com/contact" , method="POST" target="null">
+                    <form target="null">
                         <label for="fname">Name</label>
-                        <input type="text" id="fname" name="name" placeholder="Your name..">
+                        <input type="text" id="fname" name="_name_" placeholder="Your name..">
 
                         <label for="lname">E-Mail</label>
-                        <input type="text" id="lname" name="email" placeholder="Your Mail id">
+                        <input type="text" id="lname" name="_email_" placeholder="Your Mail id">
 
                         <label for="subject">Message</label>
-                        <textarea id="subject" name="message" placeholder="Write something.." style="height:200px"></textarea>
-
-                        <input type="submit" value="Submit" class="btn btn-primary" id="form">
+                        <textarea id="subject" name="_message_" placeholder="Write something.." style="height:200px"></textarea>
+                        <button class="btn btn-primary" id="form">SEND</button>
                     </form>
                 </div>
             </div>
