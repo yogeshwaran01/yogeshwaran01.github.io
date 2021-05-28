@@ -72,7 +72,7 @@ projects_btn.onclick = function() {
     contact_elements.style.display = "none"
     projects_elements.style.display = "block"
     about_elements.style.display = "none"
-    window.open("https://github.com/yogeshwaran01")
+        // window.open("https://github.com/yogeshwaran01")
 }
 
 contact_btn.onclick = function() {
