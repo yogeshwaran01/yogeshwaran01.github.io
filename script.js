@@ -38,7 +38,7 @@ ${date_}
         var a = document.createElement('div')
         a.setAttribute('class', 'card mb-4')
         a.innerHTML = ele_template
-
+        document.getElementById('spinner').classList.add('visually-hidden')
         blogs_elements.appendChild(a)
 
     }
