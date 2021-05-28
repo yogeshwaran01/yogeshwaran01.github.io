@@ -6,6 +6,7 @@ const url = "https://yogeshwaran01-api.herokuapp.com/api/get";
 Http.open("GET", url);
 Http.send();
 
+var spinner = document.getElementById('spinner')
 var lister = document.getElementById('lister')
 
 Http.onloadend = (e) => {
@@ -27,6 +28,7 @@ Http.onloadend = (e) => {
             var content = requried_body.body;
             var t = `<h2 class="blog-post-title" id="t">${requried_body.title}</h2>`
             var d = `<p class="blog-post-meta" id="d">${requried_body.timestamp}</p>`
+            spinner.classList.add('visually-hidden')
             document.getElementById('art').innerHTML = t + d + content;
         } else {
             continue;
