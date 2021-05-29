@@ -99,7 +99,7 @@ theme_btn.onclick = function() {
     eles = document.getElementsByClassName('card-footer')
     for (let index = 0; index < eles.length; index++) {
         var element = eles[index];
-        element.classList.toggle("dark-mode")
+        element.classList.toggle("dark-mode-card")
 
     }
     var txt = "🌜 Dark"

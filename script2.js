@@ -18,7 +18,8 @@ Http.onloadend = (e) => {
         var url_ = "/post?post=" + element.url
         var title_ = element.title
         var a = document.createElement('li')
-        var temp_ele = `<a href="${url_}">${title_}</a>`
+        a.setAttribute('class', 'list-group-item')
+        var temp_ele = `<a href="${url_}" style="text-decoration: none;">${title_}</a>`
         a.innerHTML = temp_ele
         lister.appendChild(a)
 
@@ -43,10 +44,10 @@ var theme_btn = document.getElementById('theme')
 theme_btn.onclick = function() {
     document.body.classList.toggle("dark-mode")
     document.getElementById('name').classList.toggle("name-dark")
-    eles = document.getElementsByClassName('card-body')
+    eles = document.getElementsByClassName('list-group-item')
     for (let index = 0; index < eles.length; index++) {
         var element = eles[index];
-        element.classList.toggle("dark-mode")
+        element.classList.toggle("dark-mode-card")
 
     }
     // eles = document.getElementsByClassName('card-footer')
