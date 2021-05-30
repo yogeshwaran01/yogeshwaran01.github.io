@@ -31,6 +31,7 @@ Http.onloadend = (e) => {
             var d = `<p class="blog-post-meta" id="d">${requried_body.timestamp}</p>`
             spinner.classList.add('visually-hidden')
             document.getElementById('art').innerHTML = t + d + content;
+            hljs.highlightAll()
         } else {
             continue;
         }
