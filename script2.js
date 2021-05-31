@@ -37,12 +37,7 @@ Http.onloadend = (e) => {
                 document.getElementById('art').innerHTML = t + d + content;
                 hljs.highlightAll()
             } else {
-                document.title = "404";
-                var b = "Post not Found"
-                var t = `<h2 class="blog-post-title" id="t">${b}</h2>`
-                spinner.classList.add('visually-hidden')
-                document.getElementById('art').innerHTML = t
-                hljs.highlightAll()
+                continue
             }
         } else if (id) {
             if (element.id == id) {
@@ -55,12 +50,7 @@ Http.onloadend = (e) => {
                 document.getElementById('art').innerHTML = t + d + content;
                 hljs.highlightAll()
             } else {
-                document.title = "404";
-                var b = "Post not Found"
-                var t = `<h2 class="blog-post-title" id="t">${b}</h2>`
-                spinner.classList.add('visually-hidden')
-                document.getElementById('art').innerHTML = t
-                hljs.highlightAll()
+                continue
             }
         } else {
             document.title = "404";
