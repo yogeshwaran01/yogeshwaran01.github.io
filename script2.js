@@ -1,4 +1,7 @@
-var query = new URLSearchParams(document.location.search).get('post')
+var url_params = new URLSearchParams(document.location.search)
+var query = url_params.get('post')
+var id = url_params.get('id')
+
 
 const Http = new XMLHttpRequest();
 
@@ -23,18 +26,51 @@ Http.onloadend = (e) => {
         a.innerHTML = temp_ele
         lister.appendChild(a)
 
-        if (element.url == query) {
-            var requried_body = element;
-            document.title = requried_body.title;
-            var content = requried_body.body;
-            var t = `<h2 class="blog-post-title" id="t">${requried_body.title}</h2>`
-            var d = `<p class="blog-post-meta" id="d">${requried_body.timestamp}</p>`
-            spinner.classList.add('visually-hidden')
-            document.getElementById('art').innerHTML = t + d + content;
-            hljs.highlightAll()
+        if (query) {
+            if (element.url == query) {
+                var requried_body = element;
+                document.title = requried_body.title;
+                var content = requried_body.body;
+                var t = `<h2 class="blog-post-title" id="t">${requried_body.title}</h2>`
+                var d = `<p class="blog-post-meta" id="d">${requried_body.timestamp}</p>`
+                spinner.classList.add('visually-hidden')
+                document.getElementById('art').innerHTML = t + d + content;
+                hljs.highlightAll()
+            } else {
+                document.title = "404";
+                var b = "Post not Found"
+                var t = `<h2 class="blog-post-title" id="t">${b}</h2>`
+                spinner.classList.add('visually-hidden')
+                document.getElementById('art').innerHTML = t
+                hljs.highlightAll()
+            }
+        } else if (id) {
+            if (element.id == id) {
+                var requried_body = element;
+                document.title = requried_body.title;
+                var content = requried_body.body;
+                var t = `<h2 class="blog-post-title" id="t">${requried_body.title}</h2>`
+                var d = `<p class="blog-post-meta" id="d">${requried_body.timestamp}</p>`
+                spinner.classList.add('visually-hidden')
+                document.getElementById('art').innerHTML = t + d + content;
+                hljs.highlightAll()
+            } else {
+                document.title = "404";
+                var b = "Post not Found"
+                var t = `<h2 class="blog-post-title" id="t">${b}</h2>`
+                spinner.classList.add('visually-hidden')
+                document.getElementById('art').innerHTML = t
+                hljs.highlightAll()
+            }
         } else {
-            continue;
+            document.title = "404";
+            var b = "Post not Found"
+            var t = `<h2 class="blog-post-title" id="t">${b}</h2>`
+            spinner.classList.add('visually-hidden')
+            document.getElementById('art').innerHTML = t
+            hljs.highlightAll()
         }
+
     }
 };
 
