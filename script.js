@@ -102,6 +102,11 @@ theme_btn.onclick = function() {
         element.classList.toggle("dark-mode-card")
 
     }
+
+    document.getElementById('fname').classList.toggle('dark-mode-card')
+    document.getElementById('lname').classList.toggle('dark-mode-card')
+    document.getElementById('subject').classList.toggle('dark-mode-card')
+
     var txt = "🌜 Dark"
     if (!!this.dataset.clicked) {
         this.dataset.clicked = ""
