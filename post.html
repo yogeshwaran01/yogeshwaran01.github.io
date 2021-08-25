@@ -29,6 +29,14 @@
     <link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
     <link rel="manifest" href="/favicon/manifest.json">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Newsreader:wght@200;400&display=swap');
+        #head,
+        #body,
+        #ts {
+            font-family: 'Newsreader', serif;
+        }
+    </style>
     <meta name="msapplication-TileColor" content="#5cbe09">
     <meta name="msapplication-TileImage" content="/favicon/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
@@ -41,11 +49,41 @@
         <nav class="nav">
             <div class="container">
                 <div class="nav-wrapper">
-                    <a href="/" class="brand-logo center" style="color: black;">YOGESHWARAN R</a>
+                    <a href="/" class="brand-logo" style="color: black; font-size: 1.8rem;">YOGESHWARAN R</a>
+                    <ul id="nav-mobile" class="right hide-on-med-and-down">
+                        <li><a href="/#abt" style="color: black;">About</a></li>
+                        <li><a href="/#edu" style="color: black;">Education</a></li>
+                        <li><a href="/#cert" style="color: black;">Certifications</a></li>
+                        <li><a href="/#pro" style="color: black;">Projects</a></li>
+                        <li><a href="/#cont" style="color: black;">Contact</a></li>
+                        <li><a href="/#blo" style="color: black;">Blogs</a></li>
+                    </ul>
                 </div>
             </div>
         </nav>
     </header>
+
+    <br>
+
+    <div class="container">
+        <h1 class="center" id="head"></h1>
+    </div>
+
+    <div class="container">
+        <div class="center" style="color: aquamarine;">
+            <p id="ts"></p>
+        </div>
+    </div>
+
+    <div class="container" id="body">
+
+    </div>
+
+    <div class="fixed-action-btn" id="dkt">
+        <button class="btn-floating btn-large ftbtn">
+            <i class="material-icons" id="fnit" style="color: black;"> wb_sunny </i>
+        </button>
+    </div>
 
     <br>
 
@@ -74,25 +112,6 @@
         </div>
     </div>
 
-    <div class="container">
-        <h1 class="center" id="head"></h1>
-    </div>
-
-    <div class="container">
-        <div class="center" style="color: aquamarine;">
-            <p id="ts"></p>
-        </div>
-    </div>
-
-    <div class="container" id="body">
-
-    </div>
-
-    <div class="fixed-action-btn" id="dkt">
-        <a class="btn-floating btn-large ftbtn">
-            <i class="material-icons" id="fnit" style="color: black;"> wb_sunny </i>
-        </a>
-    </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>

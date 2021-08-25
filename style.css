@@ -1,11 +1,16 @@
     .nav,
-    .page-footer {
+    .footer {
         background-color: #5cbe09;
     }
     
     .dark-mode {
         background-color: black;
         color: white;
+    }
+    
+    .ftbtn:focus {
+        color: black;
+        background-color: #5cbe09;
     }
     
     .ftbtn {
@@ -100,4 +105,10 @@
     .ts {
         color: #000;
         font-size: medium;
+    }
+    
+    @media (max-width: 600px) {
+        .row .col.s6 {
+            width: 100%;
+        }
     }
