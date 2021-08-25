@@ -1,0 +1,103 @@
+    .nav,
+    .page-footer {
+        background-color: #5cbe09;
+    }
+    
+    .dark-mode {
+        background-color: black;
+        color: white;
+    }
+    
+    .ftbtn {
+        color: black;
+        background-color: #5cbe09;
+    }
+    
+    .ftbtn:hover {
+        background-color: #5cbe09;
+    }
+    
+    .medias {
+        margin-top: 2px;
+        padding-top: 3px;
+        border-color: red;
+        border-radius: 1em;
+    }
+    
+    .simg {
+        padding-top: 3px;
+        margin: auto;
+    }
+    
+    .card-panel {
+        background-color: #5cbe09;
+    }
+    
+    .about {
+        color: black;
+        font-size: medium;
+    }
+    
+    .card-title {
+        font-size: x-large;
+        color: black;
+        font-style: italic;
+    }
+    
+    .edup {
+        color: black;
+        font-size: medium;
+    }
+    
+    .year {
+        color: black;
+        font-style: italic;
+    }
+    
+    .card-action {
+        padding-top: 14px;
+        border-top: 2cm;
+        text-align: right;
+    }
+    
+    .edul {
+        color: rgb(2, 2, 2);
+        text-decoration: wavy;
+    }
+    
+    input:focus,
+    input:active {
+        border-bottom: 1px solid black !important;
+        box-shadow: 0 1px 0 0 black !important;
+    }
+    
+    textarea:focus,
+    input:active {
+        border-bottom: 1px solid black !important;
+        box-shadow: 0 1px 0 0 black !important;
+    }
+    
+    label.active {
+        color: black !important;
+    }
+    
+    .input-field label {
+        color: #000;
+        font-size: medium;
+    }
+    
+    input,
+    textarea {
+        border-bottom: 1px solid black !important;
+        box-shadow: 0 1px 0 0 black !important;
+    }
+    
+    .card-content {
+        color: black;
+        background-color: #5cbe09;
+    }
+    
+    .ts {
+        color: #000;
+        font-size: medium;
+    }
