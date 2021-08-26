@@ -1,3 +1,3 @@
 ```js
-console.log("My Website")
+console.log("My 🔥 website")
 ```

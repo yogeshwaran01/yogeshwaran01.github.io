@@ -11,12 +11,12 @@ dkt.onclick = () => {
 
     let fnit = document.getElementById('fnit')
 
-    var txt = "wb_sunny"
+    var txt = "brightness_3"
     if (!!dkt.dataset.clicked) {
         dkt.dataset.clicked = ""
     } else {
         dkt.dataset.clicked = "1";
-        txt = "brightness_3";
+        txt = "wb_sunny";
     }
     fnit.innerHTML = txt;
 
@@ -104,6 +104,7 @@ getBlogs()
         })
 
         document.getElementById('blog').innerHTML = string
+        document.getElementById('loading').setAttribute("hidden", true)
     })
 
 

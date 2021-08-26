@@ -113,3 +113,13 @@
             width: 100%;
         }
     }
+    
+    .spinner-layer {
+        border-color: #5cbe09
+    }
+    
+    .chip {
+        background-color: #5cbe09;
+        color: #000;
+        width: 80px;
+    }
