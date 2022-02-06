@@ -1,0 +1,1 @@
+{"id":"5f7cde72-da5f-444d-9f07-20355968060a","space":16078,"runtime":"nodejs14.x","name":"backend","path":"z9nyf8","project":"c09laftl","account":"144798365827","region":"ap-southeast-1","deps":["axios@^0.25.0","body-parser@^1.19.1","cors@^2.8.5","deta@^1.0.1","dotenv@^14.3.2","express@^4.17.2"],"envs":["DEV_TO_API","BOT","CHAT_ID"],"public":true,"log_level":"debug","cron":""}
