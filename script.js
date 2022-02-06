@@ -1,6 +1,10 @@
-document.addEventListener('DOMContentLoaded', function() {
+const api = "https://z9nyf8.deta.dev"
+
+document.addEventListener('DOMContentLoaded', async () => {
     var elems = document.querySelectorAll('.fixed-action-btn');
     M.FloatingActionButton.init(elems);
+    
+    await fetch(api + "/visit")
 });
 
 var dkt = document.getElementById('dkt')
@@ -27,13 +31,16 @@ var skipable_repos = Array(
     "yogeshwaran01/yogeshwaran01",
     "yogeshwaran01/bash-scripting-basics",
     "yogeshwaran01/Java-Learn",
-    "yogeshwaran01/python-markdown-maker",
     "yogeshwaran01/telebot",
     "yogeshwaran01/website",
+    "yogeshwaran01/js",
 )
 
 
 async function githubRepos() {
+
+    // Function fetch all github repos
+
     let repos = Array()
     let api = "https://api.github.com/users/yogeshwaran01/repos"
     await fetch(api)
@@ -59,14 +66,10 @@ async function githubRepos() {
     return repos
 }
 
-async function getBlogs() {
-    let blogs = Array()
-    await fetch("https://yogeshwaran01-api.herokuapp.com/api/get")
-        .then(res => res.json())
-        .then(data => {
-            blogs.push(data)
-        })
-    return blogs
+let fetchBlogs = async () => {
+    // Function fetch all github blogs
+    const response = await fetch(api + "/blogs")
+    return await response.json()
 }
 
 githubRepos()
@@ -83,18 +86,20 @@ githubRepos()
 
 let modols = Array()
 
-getBlogs()
+fetchBlogs()
     .then(data => {
         let string = ""
 
-        data[0].forEach(d => {
+        data.forEach(d => {
             var temp = `<div class="col s12">
                 <div class="card light-green">
                     <div class="card-content">
-                        <a class="card-title" href="/post?post=${d.url}" id="${d.id}btn">${d.title}</a>
+                        <a class="card-title" href="${d.canonical_url}" id="${d.id}btn">${d.title}</a>
+                        <span class="new badge black" data-badge-caption="👀">${d.page_views_count}</span>
+                        <span class="new badge black" data-badge-caption="❤️">${d.public_reactions_count}</span>
                     </div>
                     <div class="card-action">
-                        <span class="ts">${d.timestamp}</span>
+                        <span class="ts">${d.published_at}</span>
                     </div>
                 </div>
             </div>
@@ -109,28 +114,17 @@ getBlogs()
 
 
 document.getElementById('submit').onclick = async() => {
-    var token = "1960582858:AAFhO8IiZaONEIHde3X8jDRZParbS18t6aA"
-    var api_link = `https://api.telegram.org/bot${token}/sendMessage`
-    var chat_id_string = "1047531822"
 
-    var string = `
-        Name: ${document.getElementById('name').value}
-    
-Email-id: ${document.getElementById('email').value}
-    
-Message: 
-            ${document.getElementById("textarea").value}
-        `
-
-    await fetch(api_link, {
+    await fetch(api + '/contact', {
         method: "POST",
         headers: {
             'Accept': 'application/json',
             'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-            chat_id: chat_id_string,
-            text: string
+            name: document.getElementById('name').value,
+            mail: document.getElementById('email').value,
+            message: document.getElementById('textarea').value
         })
     })
 

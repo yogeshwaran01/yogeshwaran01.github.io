@@ -1,1 +1,5 @@
 _site
+backend/.env
+backend/node_modules
+backend/code.json
+backend/secret.json
