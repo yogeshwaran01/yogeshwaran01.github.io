@@ -23,8 +23,9 @@ app.use(cors({
     origin: '*'
 }))
 
-let sendMessageToDeveloper = async (text) => {
-    // Function send Message to the developer via Telegram
+
+let sendMessage = async (chat_id, text) => {
+    // Function send Message to the chatid via Telegram
 
     var api_link = `https://api.telegram.org/bot${BOT}/sendMessage`
 
@@ -37,13 +38,21 @@ let sendMessageToDeveloper = async (text) => {
             },
             data: JSON.stringify(
                 {
-                    chat_id: chatID,
+                    chat_id: chat_id,
                     text: text
                 }
             )
         }
     )
 }
+
+
+let sendMessageToDeveloper = async (text) => {
+    // Function send Message to the developer via Telegram
+
+    sendMessage(chatID, text)
+}
+
 
 let fetchBlogs = async () => {
 
@@ -95,5 +104,21 @@ app.get('/visit', async (resquest, response) => {
 
     response.json({ 'msg': 'ok' })
 })
+
+
+app.post('/formBot', async (request, response) => {
+
+    let text = request.body.text
+    let chatid = request.body.chatid
+
+    try {
+        sendMessage(chatID, text)
+        response.json({'msg': 'error'})
+    } catch (e) {
+        response.json({'msg': 'ok'})
+    }
+
+})
+
 
 module.exports = app
