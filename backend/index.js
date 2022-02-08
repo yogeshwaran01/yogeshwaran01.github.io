@@ -112,7 +112,7 @@ app.post('/formBot', async (request, response) => {
     let chatid = request.body.chatid
 
     try {
-        sendMessage(chatID, text)
+        sendMessage(chatid, text)
         response.json({'msg': 'error'})
     } catch (e) {
         response.json({'msg': 'ok'})
