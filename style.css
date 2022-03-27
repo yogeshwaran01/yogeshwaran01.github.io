@@ -1,125 +1,126 @@
-    .nav,
-    .footer {
-        background-color: #5cbe09;
-    }
-    
-    .dark-mode {
-        background-color: black;
-        color: white;
-    }
-    
-    .ftbtn:focus {
-        color: black;
-        background-color: #5cbe09;
-    }
-    
-    .ftbtn {
-        color: black;
-        background-color: #5cbe09;
-    }
-    
-    .ftbtn:hover {
-        background-color: #5cbe09;
-    }
-    
-    .medias {
-        margin-top: 2px;
-        padding-top: 3px;
-        border-color: red;
-        border-radius: 1em;
-    }
-    
-    .simg {
-        padding-top: 3px;
-        margin: auto;
-    }
-    
-    .card-panel {
-        background-color: #5cbe09;
-    }
-    
-    .about {
-        color: black;
-        font-size: medium;
-    }
-    
-    .card-title {
-        font-size: 20px;
-        color: black;
-        font-style: italic;
-        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    }
-    
-    .edup {
-        color: black;
-        font-size: 16px;
-    }
-    
-    .year {
-        color: black;
-        font-style: italic;
-    }
-    
-    .card-action {
-        padding-top: 14px;
-        border-top: 2cm;
-        text-align: right;
-    }
-    
-    .edul {
-        color: rgb(2, 2, 2);
-        text-decoration: wavy;
-    }
-    
-    input:focus,
-    input:active {
-        border-bottom: 1px solid black !important;
-        box-shadow: 0 1px 0 0 black !important;
-    }
-    
-    textarea:focus,
-    input:active {
-        border-bottom: 1px solid black !important;
-        box-shadow: 0 1px 0 0 black !important;
-    }
-    
-    label.active {
-        color: black !important;
-    }
-    
-    .input-field label {
-        color: #000;
-        font-size: medium;
-    }
-    
-    input,
-    textarea {
-        border-bottom: 1px solid black !important;
-        box-shadow: 0 1px 0 0 black !important;
-    }
-    
-    .card-content {
-        color: black;
-        background-color: #5cbe09;
-    }
-    
-    .ts {
-        color: #000;
-        font-size: medium;
-    }
-    
-    @media (max-width: 600px) {
-        .row .col.s6 {
-            width: 100%;
-        }
-    }
-    
-    .spinner-layer {
-        border-color: #5cbe09
-    }
-    
-    .chip {
-        background-color: #5cbe09;
-        color: #000;
-        width: 80px;
-    }
+.nav,
+.footer {
+  background-color: #5cbe09;
+}
+
+.dark-mode {
+  background-color: black;
+  color: white;
+}
+
+.ftbtn:focus {
+  color: black;
+  background-color: #5cbe09;
+}
+
+.ftbtn {
+  color: black;
+  background-color: #5cbe09;
+}
+
+.ftbtn:hover {
+  background-color: #5cbe09;
+}
+
+.medias {
+  margin-top: 2px;
+  padding-top: 3px;
+  border-color: red;
+  border-radius: 1em;
+}
+
+.simg {
+  padding-top: 3px;
+  margin: auto;
+}
+
+.card-panel {
+  background-color: #5cbe09;
+}
+
+.about {
+  color: black;
+  font-size: medium;
+}
+
+.card-title {
+  font-size: 20px;
+  color: black;
+  font-style: italic;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.edup {
+  color: black;
+  font-size: 16px;
+}
+
+.year {
+  color: black;
+  font-style: italic;
+}
+
+.card-action {
+  padding-top: 14px;
+  border-top: 2cm;
+  text-align: right;
+}
+
+.edul {
+  color: rgb(2, 2, 2);
+  text-decoration: wavy;
+}
+
+input:focus,
+input:active {
+  border-bottom: 1px solid black !important;
+  box-shadow: 0 1px 0 0 black !important;
+}
+
+textarea:focus,
+input:active {
+  border-bottom: 1px solid black !important;
+  box-shadow: 0 1px 0 0 black !important;
+}
+
+label.active {
+  color: black !important;
+}
+
+.input-field label {
+  color: #000;
+  font-size: medium;
+}
+
+input,
+textarea {
+  border-bottom: 1px solid black !important;
+  box-shadow: 0 1px 0 0 black !important;
+}
+
+.card-content {
+  color: black;
+  background-color: #5cbe09;
+}
+
+.ts {
+  color: #000;
+  font-size: medium;
+}
+
+@media (max-width: 600px) {
+  .row .col.s6 {
+    width: 100%;
+  }
+}
+
+.spinner-layer {
+  border-color: #5cbe09;
+}
+
+.chip {
+  background-color: #5cbe09;
+  color: #000;
+  width: 80px;
+}

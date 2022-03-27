@@ -34,6 +34,9 @@ var skipable_repos = Array(
     "yogeshwaran01/telebot",
     "yogeshwaran01/website",
     "yogeshwaran01/js",
+    "yogeshwaran01/dotfiles",
+    "yogeshwaran01/learn-express.ts",
+    "yogeshwaran01/weather_app"
 )
 
 
@@ -92,7 +95,7 @@ fetchBlogs()
 
         data.forEach(d => {
             var temp = `<div class="col s12">
-                <div class="card light-green">
+                <div class="card z-depth-5 light-green">
                     <div class="card-content">
                         <a class="card-title" href="${d.canonical_url}" id="${d.id}btn">${d.title}</a>
                         <span class="new badge black" data-badge-caption="👀">${d.page_views_count}</span>
