@@ -1,4 +1,4 @@
-const api = "https://z9nyf8.deta.dev"
+const api = "https://knffye.deta.dev/api"
 
 document.addEventListener('DOMContentLoaded', async () => {
     var elems = document.querySelectorAll('.fixed-action-btn');
