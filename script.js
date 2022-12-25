@@ -131,6 +131,6 @@ document.getElementById('submit').onclick = async() => {
         })
     })
 
-    M.toast({ html: '<p>Message sented Sucessfully</p>' })
+    M.toast({ html: '<p>Message sented Sucessfully </p>' })
 
 }
