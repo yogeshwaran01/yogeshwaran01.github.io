@@ -35,9 +35,16 @@
   <title>YOGESHWARAN R (yogeshwaran01)</title>
 
   <style>
+    :root {
+      --background-color: black;
+      --text-color: whitesmoke;
+      --secondary-color: #282828;
+      --gray-color: #b3b3b3;
+    }
+
     body {
-      background-color: #1c1c1c;
-      color: whitesmoke;
+      background-color: var(--background-color);
+      color: var(--text-color);
       font-family: 'Montserrat', sans-serif;
       margin: 0;
       padding: 0;
@@ -46,18 +53,14 @@
       align-items: center;
       min-height: 100vh;
       -webkit-user-select: none;
-      /* Safari */
       -moz-user-select: none;
-      /* Firefox */
       -ms-user-select: none;
-      /* IE/Edge */
       user-select: none;
-      /* Standard */
     }
 
     .container {
       max-width: 1000px;
-      border: solid 2px #1db954;
+      border: solid 2px var(--accent-color);
       padding: 10px;
       border-radius: 20px;
       margin: 20px;
@@ -73,18 +76,17 @@
     h2,
     h3,
     a:hover {
-      color: #1db954;
+      color: var(--accent-color);
     }
 
     a {
-      color: whitesmoke;
+      color: var(--text-color);
       text-decoration: none;
     }
 
     .links {
-      border: solid #1db954 3px;
+      border: solid var(--accent-color) 3px;
     }
-
 
     table {
       width: 100%;
@@ -98,15 +100,15 @@
     }
 
     th {
-      background-color: #282828;
+      background-color: var(--secondary-color);
     }
 
     tr {
-      color: whitesmoke;
+      color: var(--text-color);
     }
 
     tr:nth-child(even) {
-      background-color: #282828;
+      background-color: var(--secondary-color);
     }
 
     p {
@@ -121,53 +123,53 @@
     }
 
     .project-card {
-      background-color: #282828;
+      background-color: var(--secondary-color);
       padding: 20px;
-      border: solid #1db954 2px;
+      border: solid var(--accent-color) 2px;
       border-radius: 5px;
       margin-bottom: 20px;
     }
 
     .project-card h3 {
-      color: whitesmoke;
+      color: var(--text-color);
       font-size: 24px;
       margin-top: 0;
       margin-bottom: 10px;
     }
 
     .project-card p {
-      color: #b3b3b3;
+      color: var(--gray-color);
       margin-bottom: 10px;
     }
 
     .blog-desc {
-      color: #b3b3b3;
+      color: var(--gray-color);
       margin-bottom: 10px;
     }
 
     .project-card a {
-      color: #1db954;
+      color: var(--accent-color);
       text-decoration: none;
     }
 
     .blog-card {
-      border: 2px solid #1db954;
+      border: 2px solid var(--accent-color);
       padding: 20px;
       margin-bottom: 20px;
-      background-color: #282828;
+      background-color: var(--secondary-color);
     }
 
     .blog-title {
       font-size: 24px;
       margin-bottom: 10px;
-      color: whitesmoke;
+      color: var(--text-color);
     }
 
     .blog-meta {
       display: flex;
       justify-content: space-between;
       font-size: 14px;
-      color: #1db954;
+      color: var(--accent-color);
     }
 
     .published-date,
@@ -265,7 +267,7 @@
       <div class="project-card">
           <a href="${element.html_url}"><h3>${element.name}</h3></a>
           <p>${element.description}</p>
-          <p style="color: #1db954;">Stars: ${element.stargazers_count}</p>
+          <p style="color: var(--accent-color);">Stars: ${element.stargazers_count}</p>
       </div>
       `)
         );
@@ -304,7 +306,15 @@
     }
 
     addDevToBlogs("yogeshwaran01");
+    const accentColors = ['#ff0000', '#ff7f00', '#ffff00', '#00ff00', '#0000ff', '#4b0082', '#8b00ff'];
+    let currentIndex = 0;
 
+    function changeAccentColor() {
+      document.documentElement.style.setProperty('--accent-color', accentColors[currentIndex]);
+      currentIndex = (currentIndex + 1) % accentColors.length;
+    }
+
+    setInterval(changeAccentColor, 1000);
   </script>
 </body>
 
